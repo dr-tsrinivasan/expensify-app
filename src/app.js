@@ -15,15 +15,15 @@ import 'react-dates/lib/css/_datepicker.css'
 const store = configureStore();
 
 
-store.subscribe(() => {
-    const state = store.getState();
-    const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
-    console.log(visibleExpenses)
-  })
+// store.subscribe(() => {
+//     const state = store.getState();
+//     const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
+//     console.log(visibleExpenses)
+//   })
 
-const expenseOne = store.dispatch(addExpense({description: 'Water Bill', amount: 400, createdAt: 1000}))
-const expenseTwo = store.dispatch(addExpense({description: 'Electricity Bill', amount: 800, createdAt: -1000}))
-const expenseThree = store.dispatch(addExpense({description: 'Rent', amount: 80000, createdAt: 5000}))
+// const expenseOne = store.dispatch(addExpense({description: 'Water Bill', amount: 400, createdAt: 1000}))
+// const expenseTwo = store.dispatch(addExpense({description: 'Electricity Bill', amount: 800, createdAt: -1000}))
+// const expenseThree = store.dispatch(addExpense({description: 'Rent', amount: 80000, createdAt: 5000}))
 
 // store.dispatch(setTextFilter('water'))
 
@@ -31,7 +31,7 @@ const expenseThree = store.dispatch(addExpense({description: 'Rent', amount: 800
 //     store.dispatch(setTextFilter('Rent'))
 // }, 3000)
 
-console.log(store.getState())
+// console.log(store.getState())
 
 const jsx = (
     <Provider  store={store}>
